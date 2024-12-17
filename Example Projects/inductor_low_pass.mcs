@@ -1,0 +1,222 @@
+{
+    "circuit": {
+        "labels": [
+            {
+                "name": "Vout",
+                "transform": {
+                    "position": {
+                        "x": 2500,
+                        "y": 32500
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rotation": 0.0
+                }
+            },
+            {
+                "name": "Vin",
+                "transform": {
+                    "position": {
+                        "x": -30000,
+                        "y": 32500
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rotation": 3.141592653589793
+                }
+            }
+        ],
+        "models": [
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G0",
+                    "transform": {
+                        "position": {
+                            "x": -30000,
+                            "y": -2500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "ACVoltageSource",
+                "value": {
+                    "ac_voltage_amplitude": 1.0,
+                    "reference": "V0",
+                    "voltage_function": {
+                        "type": "SquareFunction",
+                        "value": {
+                            "amplitude": 10.0,
+                            "dc_offset": 0.0,
+                            "duty_cycle": 0.5,
+                            "frequency": 10.0,
+                            "phase": 0.0
+                        }
+                    },
+                    "transform": {
+                        "position": {
+                            "x": -30000,
+                            "y": 17500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G1",
+                    "transform": {
+                        "position": {
+                            "x": 2500,
+                            "y": -2500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Resistor",
+                "value": {
+                    "reference": "R0",
+                    "resistance": 100.0,
+                    "transform": {
+                        "position": {
+                            "x": 2500,
+                            "y": 17500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 3.141592653589793
+                    }
+                }
+            },
+            {
+                "type": "Inductor",
+                "value": {
+                    "inductance": 1.0,
+                    "reference": "L0",
+                    "transform": {
+                        "position": {
+                            "x": -15000,
+                            "y": 32500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            }
+        ],
+        "wires": [
+            {
+                "name": "",
+                "p0": {
+                    "x": -30000,
+                    "y": -2500
+                },
+                "p1": {
+                    "x": -30000,
+                    "y": 7500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 2500,
+                    "y": -2500
+                },
+                "p1": {
+                    "x": 2500,
+                    "y": 7500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -30000,
+                    "y": 27500
+                },
+                "p1": {
+                    "x": -30000,
+                    "y": 32500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -30000,
+                    "y": 32500
+                },
+                "p1": {
+                    "x": -25000,
+                    "y": 32500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -5000,
+                    "y": 32500
+                },
+                "p1": {
+                    "x": 2500,
+                    "y": 32500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 2500,
+                    "y": 32500
+                },
+                "p1": {
+                    "x": 2500,
+                    "y": 27500
+                }
+            }
+        ]
+    },
+    "page": {
+        "boundaries": {
+            "bottom": -120000,
+            "left": -200000,
+            "right": 200000,
+            "top": 120000
+        },
+        "grid_guides": 1,
+        "grid_snap": 2500
+    },
+    "view": {
+        "center": {
+            "x": -12167,
+            "y": 12168
+        },
+        "size": {
+            "x": 113827,
+            "y": 58459
+        }
+    }
+}

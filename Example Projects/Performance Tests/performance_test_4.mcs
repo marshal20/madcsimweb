@@ -1,0 +1,722 @@
+{
+    "circuit": {
+        "labels": [
+            {
+                "name": "Vin",
+                "transform": {
+                    "position": {
+                        "x": -25000,
+                        "y": 82500
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rotation": 1.5707963267948966
+                }
+            },
+            {
+                "name": "Vout",
+                "transform": {
+                    "position": {
+                        "x": 5000,
+                        "y": 82500
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rotation": 1.5707963267948966
+                }
+            }
+        ],
+        "models": [
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G0",
+                    "transform": {
+                        "position": {
+                            "x": -25000,
+                            "y": -2500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Resistor",
+                "value": {
+                    "reference": "R0",
+                    "resistance": 1000.0,
+                    "transform": {
+                        "position": {
+                            "x": 15000,
+                            "y": 30000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G1",
+                    "transform": {
+                        "position": {
+                            "x": 30000,
+                            "y": 25000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "ACVoltageSource",
+                "value": {
+                    "ac_voltage_amplitude": 1.0,
+                    "reference": "V0",
+                    "voltage_function": {
+                        "type": "SineFunction",
+                        "value": {
+                            "amplitude": 1.0,
+                            "dc_offset": 0.0,
+                            "duty_cycle": 0.5,
+                            "frequency": 10.0,
+                            "phase": 0.0
+                        }
+                    },
+                    "transform": {
+                        "position": {
+                            "x": -25000,
+                            "y": 12500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Diode",
+                "value": {
+                    "emission_coefficient": 1.0,
+                    "i_sat": 1e-14,
+                    "reference": "D0",
+                    "vt": 0.025,
+                    "transform": {
+                        "position": {
+                            "x": -10000,
+                            "y": 30000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G2",
+                    "transform": {
+                        "position": {
+                            "x": -25000,
+                            "y": 50000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Resistor",
+                "value": {
+                    "reference": "R1",
+                    "resistance": 1000.0,
+                    "transform": {
+                        "position": {
+                            "x": 15000,
+                            "y": 82500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G3",
+                    "transform": {
+                        "position": {
+                            "x": 30000,
+                            "y": 77500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "ACVoltageSource",
+                "value": {
+                    "ac_voltage_amplitude": 1.0,
+                    "reference": "V1",
+                    "voltage_function": {
+                        "type": "SineFunction",
+                        "value": {
+                            "amplitude": 1.0,
+                            "dc_offset": 0.0,
+                            "duty_cycle": 0.5,
+                            "frequency": 10.0,
+                            "phase": 0.0
+                        }
+                    },
+                    "transform": {
+                        "position": {
+                            "x": -25000,
+                            "y": 65000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Diode",
+                "value": {
+                    "emission_coefficient": 1.0,
+                    "i_sat": 1e-14,
+                    "reference": "D1",
+                    "vt": 0.025,
+                    "transform": {
+                        "position": {
+                            "x": -10000,
+                            "y": 82500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G4",
+                    "transform": {
+                        "position": {
+                            "x": 55000,
+                            "y": 50000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Resistor",
+                "value": {
+                    "reference": "R2",
+                    "resistance": 1000.0,
+                    "transform": {
+                        "position": {
+                            "x": 95000,
+                            "y": 82500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G5",
+                    "transform": {
+                        "position": {
+                            "x": 110000,
+                            "y": 77500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "ACVoltageSource",
+                "value": {
+                    "ac_voltage_amplitude": 1.0,
+                    "reference": "V2",
+                    "voltage_function": {
+                        "type": "SineFunction",
+                        "value": {
+                            "amplitude": 1.0,
+                            "dc_offset": 0.0,
+                            "duty_cycle": 0.5,
+                            "frequency": 10.0,
+                            "phase": 0.0
+                        }
+                    },
+                    "transform": {
+                        "position": {
+                            "x": 55000,
+                            "y": 65000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Diode",
+                "value": {
+                    "emission_coefficient": 1.0,
+                    "i_sat": 1e-14,
+                    "reference": "D2",
+                    "vt": 0.025,
+                    "transform": {
+                        "position": {
+                            "x": 70000,
+                            "y": 82500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G6",
+                    "transform": {
+                        "position": {
+                            "x": 55000,
+                            "y": -2500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Resistor",
+                "value": {
+                    "reference": "R3",
+                    "resistance": 1000.0,
+                    "transform": {
+                        "position": {
+                            "x": 95000,
+                            "y": 30000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            },
+            {
+                "type": "Ground",
+                "value": {
+                    "reference": "G7",
+                    "transform": {
+                        "position": {
+                            "x": 110000,
+                            "y": 25000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "ACVoltageSource",
+                "value": {
+                    "ac_voltage_amplitude": 1.0,
+                    "reference": "V3",
+                    "voltage_function": {
+                        "type": "SineFunction",
+                        "value": {
+                            "amplitude": 1.0,
+                            "dc_offset": 0.0,
+                            "duty_cycle": 0.5,
+                            "frequency": 10.0,
+                            "phase": 0.0
+                        }
+                    },
+                    "transform": {
+                        "position": {
+                            "x": 55000,
+                            "y": 12500
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 0.0
+                    }
+                }
+            },
+            {
+                "type": "Diode",
+                "value": {
+                    "emission_coefficient": 1.0,
+                    "i_sat": 1e-14,
+                    "reference": "D3",
+                    "vt": 0.025,
+                    "transform": {
+                        "position": {
+                            "x": 70000,
+                            "y": 30000
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rotation": 1.5707963267948966
+                    }
+                }
+            }
+        ],
+        "wires": [
+            {
+                "name": "",
+                "p0": {
+                    "x": 0,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 5000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 25000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 30000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 30000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 30000,
+                    "y": 25000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": -2500
+                },
+                "p1": {
+                    "x": -25000,
+                    "y": 2500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": 22500
+                },
+                "p1": {
+                    "x": -25000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": -20000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 0,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 5000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 25000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 30000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 30000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 30000,
+                    "y": 77500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": 50000
+                },
+                "p1": {
+                    "x": -25000,
+                    "y": 55000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": 75000
+                },
+                "p1": {
+                    "x": -25000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": -25000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": -20000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 80000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 85000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 105000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 110000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 110000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 110000,
+                    "y": 77500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": 50000
+                },
+                "p1": {
+                    "x": 55000,
+                    "y": 55000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": 75000
+                },
+                "p1": {
+                    "x": 55000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": 82500
+                },
+                "p1": {
+                    "x": 60000,
+                    "y": 82500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 80000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 85000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 105000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 110000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 110000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 110000,
+                    "y": 25000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": -2500
+                },
+                "p1": {
+                    "x": 55000,
+                    "y": 2500
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": 22500
+                },
+                "p1": {
+                    "x": 55000,
+                    "y": 30000
+                }
+            },
+            {
+                "name": "",
+                "p0": {
+                    "x": 55000,
+                    "y": 30000
+                },
+                "p1": {
+                    "x": 60000,
+                    "y": 30000
+                }
+            }
+        ]
+    },
+    "page": {
+        "boundaries": {
+            "bottom": -120000,
+            "left": -200000,
+            "right": 200000,
+            "top": 120000
+        },
+        "grid_guides": 1,
+        "grid_snap": 2500
+    },
+    "view": {
+        "center": {
+            "x": 38819,
+            "y": 40611
+        },
+        "size": {
+            "x": 235603,
+            "y": 121000
+        }
+    }
+}

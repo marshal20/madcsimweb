@@ -1,0 +1,111 @@
+
+
+.MadCSimWebApp {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: block;
+}
+
+.SchematicGroup {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.LabelNameDialogLayout {
+    display: grid;
+    grid-template-areas:
+        'label input'
+        'none button';
+    gap: 10px;
+}
+.LabelNameDialogLayout > p      { grid-area: label;  align-content: center; }
+.LabelNameDialogLayout > input  { grid-area: input;  }
+.LabelNameDialogLayout > button { grid-area: button; }
+
+
+
+.SchematicToolButton[is_selected="true"] {
+    border: solid 1px var(--FOREGROUND_COLOR_1);
+    background-color: var(--BACKGROUND_COLOR_2);
+}
+
+
+
+.AboutDialogLayout {
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    grid-template-areas:
+        'Logo Title'
+        'Logo Buttons'
+        'Description Description';
+    gap: 0.4em;
+}
+.AboutDialogLayout > .AboutLogo {
+    grid-area: Logo;
+}
+.AboutDialogLayout > .AboutTitle {
+    grid-area: Title;
+    text-align: center;
+    align-content: center;
+}
+.AboutDialogLayout > .AboutButtons {
+    grid-area: Buttons;
+    padding: 0.4em;
+}
+.AboutButtons > button {
+    width: 100%;
+}
+.AboutDialogLayout > .AboutDescription {
+    grid-area: Description;
+    height: 10em;
+    padding: 0.5em;
+    overflow: auto;
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+}
+
+
+
+.SelectModelDialog {
+    display: grid;
+    grid-template-columns: 1fr 10em;
+    grid-template-areas:
+        'ModelsTree Buttons'
+        'ModelsTree ModelView';
+    gap: 0.4em;
+}
+.SelectModelDialog > .TreeView {
+    grid-area: ModelsTree;
+}
+.SelectModelDialog > .DialogButtonsGroup {
+    grid-area: Buttons;
+}
+.SelectModelDialog > .FullSizeCanvasContainer {
+    grid-area: ModelView;
+    height: 10em;
+}
+
+
+
+.ProgressDialogButtonsGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+
+
+.PlotsDialogContainer {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.PlotsDialogContainer > .FullSizeCanvasContainer {
+    height: 340px;
+}
+
+

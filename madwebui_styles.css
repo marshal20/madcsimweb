@@ -1,0 +1,380 @@
+
+/* Variables and Color Scheme */
+
+:root {
+    --border_radius: 12px;
+    --font_mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+        'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+        'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+
+    /* Background Colors */
+    --BACKGROUND_COLOR_0: #202020;
+    --BACKGROUND_COLOR_1: #303030;
+    --BACKGROUND_COLOR_2: #404040;
+    --BACKGROUND_COLOR_3: #606060;
+    
+    /* Foreground Colors */
+    --FOREGROUND_COLOR_0: #D0D0D0;
+    --FOREGROUND_COLOR_1: #C0C0C0;
+    --FOREGROUND_COLOR_2: #B0B0B0;
+    --FOREGROUND_COLOR_3: #909090;
+    
+    /* Select color */
+    --SELECT_COLOR: #202080;
+}
+
+
+/* Base Elements */
+
+* {
+    border: 0px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font_mono);
+    font-size: inherit;
+
+    color: var(--FOREGROUND_COLOR_0);
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+
+
+/* remove min width of input elements */
+input {
+    min-width: 0;
+}
+
+
+
+.FullSizeCanvasContainer {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 0px;
+}
+.FullSizeCanvas {
+    /* round size to avoid weird fraction sizes causing fuzziness. */
+    height: round(nearest, 100%, 1px);
+    width:  round(nearest, 100%, 1px);
+    display: block;
+    border: 0px;
+}
+
+
+.SchematicToolbar{
+    display: block;
+}
+.SchematicToolbar input{
+    display: block;
+    width:  2em;
+    height: 2em;
+    object-fit: contain;
+}
+
+
+
+
+button, input, select {
+    text-align: center;
+    color: var(--FOREGROUND_COLOR_1);
+    margin: 0.2em;
+    padding: 0.2em;
+
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+    border-radius: 0.4em;
+    background: var(--BACKGROUND_COLOR_1);
+}
+
+button:hover, input:hover, select:hover {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+}
+
+button:active, input:active, select:active {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+    background-color: var(--BACKGROUND_COLOR_1);
+}
+
+
+/* remove background from select option */
+select > option {
+    background-color: transparent;
+}
+
+
+
+/* border around the progress bar */
+progress {
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+}
+
+
+
+
+.Dialog {
+    position: fixed;
+    display: grid;
+    min-width:  40px;
+    min-height: 40px;
+    max-width:  100vw;
+    max-height: 100vh;
+    padding: 0;
+
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+    border-radius: 0.4em;
+
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+.Dialog:focus {
+    z-index: 1;
+}
+
+.TitleBar {
+    width: 100%;
+    height: 1.6em;
+    padding: 0.2em;
+    margin: 0;
+
+    text-align: center;
+    /*cursor: crosshair;*/
+    user-select: none;
+
+    border-radius: 0.4em 0.4em 0 0;
+    border-bottom: solid var(--BACKGROUND_COLOR_3) 1px;
+    background-color: var(--BACKGROUND_COLOR_1);
+}
+.TitleBar p {
+    display: inline-block;
+    padding: 0 1em 0 1em;
+    margin: 0;
+    background-color: transparent;
+}
+
+.CloseButton {
+    float: right;
+    height: 1.2em;
+    width: 1.2em;
+    padding: 0;
+    margin: 0;
+
+    /* center x character */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+}
+.CloseButton:hover {
+    background-color: #E81123;
+}
+
+.DialogInnerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    min-height: 100%;
+
+    padding: 0.5em;
+    background-color: transparent;
+}
+
+.DialogButtonsGroup {
+    display: flex;
+}
+.DialogButtonsGroup > button {
+    width: 8em;
+}
+.DialogButtonsGroupHorizontal {
+    flex-direction: row;
+    justify-content: right;
+}
+.DialogButtonsGroupVertical {
+    flex-direction: column;
+}
+.DialogButtonsGroupVertical > button {
+    width: 100%;
+}
+
+
+
+.FormLayout {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.BoxLayout {
+}
+.BoxLayoutHorizontal {
+    display: flex;
+    flex-direction: row;
+}
+.BoxLayoutVertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.BoxLayout > .LayoutSpacer {
+    margin: auto;
+}
+
+
+
+.Action {
+    list-style: none;
+    
+    text-align: left;
+    margin: 0em;
+    padding: 0.2em;
+    cursor: default;
+    user-select: none;
+
+    border-radius: 0.4em;
+    border: 1px solid transparent;
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+
+.Action:hover {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+}
+
+.Action:active {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+
+
+
+.Menu {
+    display: flex;
+    padding: 0.3em;
+    margin: 0;
+
+    background-color: var(--BACKGROUND_COLOR_0);
+    border-radius: 0.4em;
+    border: 1px solid var(--BACKGROUND_COLOR_3);
+    
+    list-style-type: none;
+    list-style: none;
+}
+.MenuHorizontal {
+    flex-direction: row;
+    padding-top:    0.1em;
+    padding-bottom: 0.1em;
+    gap: 0.5em;
+}
+.MenuVertical {
+    flex-direction: column;
+    min-width: 8em;
+    width: max-content;
+}
+/* SubMenu caret */
+.MenuVertical > .SubMenuAction::after {
+    content: "\25B6";
+    float: right;
+    margin-left: 0.8em;
+}
+
+
+.Separator {
+    margin-top:    4px;
+    margin-bottom: 4px;
+    background-color: var(--BACKGROUND_COLOR_3);
+}
+
+.SeparatorHorizontal {
+    height: 1px;
+    width: 100%;
+}
+
+.SeparatorVertical {
+    height: 100%;
+    width: 1px;
+}
+
+
+
+.TreeViewNode {
+    list-style-type: none;
+}
+
+.TreeViewNodeLabel {
+    list-style: none;
+    
+    margin: 0em;
+    padding-left:  0.2em;
+    padding-right: 0.2em;
+    cursor: default;
+    user-select: none;
+
+    border-radius: 0.4em;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.TreeViewNodeLabel:hover {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+}
+.TreeViewNodeLabel:active {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+    background-color: var(--BACKGROUND_COLOR_0);
+}
+.TreeViewNode[is_selected="true"] > .TreeViewNodeLabel {
+    border: solid 1px var(--FOREGROUND_COLOR_1);
+    background-color: var(--BACKGROUND_COLOR_2);
+}
+
+.TreeView {
+    list-style-type: none;
+    overflow: auto;
+    padding: 0.4em;
+
+    height: 100%;
+    text-align: left;
+
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+    border-radius: 0.4em;
+}
+
+.TreeView ul {
+    padding-left: 2em;
+}
+
+
+
+.TableView {
+    padding: 0.4em;
+
+    border-collapse: collapse;
+
+    border: solid var(--BACKGROUND_COLOR_3) 1px;
+    border-radius: 0.4em;
+}
+
+.TableView th, .TableView td {
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    background: transparent;
+}
+
+.TableViewHeader {
+    border-bottom: solid var(--BACKGROUND_COLOR_3) 1px;
+}
+
+.TableViewRow {
+    border: transparent 1px;
+    border-radius: 0.4em;
+}
+.TableViewRow[is_selected="true"] {
+    border: solid var(--FOREGROUND_COLOR_1) 1px;
+    background-color: var(--BACKGROUND_COLOR_2);
+}
+
+
+
