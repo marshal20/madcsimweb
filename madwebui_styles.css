@@ -10,7 +10,7 @@
 
     /* Background Colors */
     --BACKGROUND_COLOR_0: #202020;
-    --BACKGROUND_COLOR_1: #303030;
+    --BACKGROUND_COLOR_1: #282828;
     --BACKGROUND_COLOR_2: #404040;
     --BACKGROUND_COLOR_3: #606060;
     
@@ -92,6 +92,8 @@ button, input, select {
     border: solid var(--BACKGROUND_COLOR_3) 1px;
     border-radius: 0.4em;
     background: var(--BACKGROUND_COLOR_1);
+
+    outline: none;
 }
 
 button:hover, input:hover, select:hover {
